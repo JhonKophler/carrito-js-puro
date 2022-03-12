@@ -179,7 +179,7 @@
         
         document.getElementById('subtotal').innerHTML = "ARS/. " +subtotal.toFixed(2);
         document.getElementById('iva').innerHTML = "ARS/. " + iva.toFixed(2);
-        document.getElementById('total').innerHTML = "ARS/. " + total.toFixed(2);
+        document.getElementById('total').value = "ARS/. " + total.toFixed(2);
 
     }
 

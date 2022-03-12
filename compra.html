@@ -38,18 +38,18 @@
             <div class="row mt-3">
                 <div class="col">
                     <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
-                    <form id="procesar-pago" action="#">
+                    <form id="procesar-pago" action="#" method="POST">
                         <div class="form-group row">
                             <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
                             <div class="col-12 col-md-10">
                                 <input type="text" class="form-control" id="cliente"
-                                    placeholder="Ingresa nombre cliente" required>
+                                    placeholder="Ingresa nombre cliente" required name="destinatario">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
                             <div class="col-12 col-md-10">
-                                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo" required>
+                                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo" required name="cc_to">
                             </div>
                         </div>
 
@@ -86,7 +86,7 @@
                                 <tr>
                                     <th colspan="4" scope="col" class="text-right">TOTAL :</th>
                                     <th scope="col">
-                                        <p id="total"></p>
+                                        <input type="text" id="total" name="monto" readonly class=" font-weight-bold border-0">
                                     </th>
                                     <!-- <th scope="col"></th> -->
                                 </tr>
@@ -103,7 +103,7 @@
                                 <a href="index.html" class="btn btn-info btn-block">Seguir comprando</a>
                             </div>
                             <div class="col-xs-12 col-md-4">
-                                <a href="" class="btn btn-success btn-block" id="procesar-compra">Realizar compra</a>
+                                <input href="#" class="btn btn-success btn-block" type="submit" value="Confirmar Compra" id="procesar-compra"></input>
                             </div>
                         </div>
                     </form>
@@ -128,6 +128,7 @@
     <script src="js/sweetalert2.min.js"></script>
     <script src="js/carrito.js"></script>
     <script src="js/compra.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </body>
 
